@@ -10,41 +10,66 @@ module.exports = function(defaults) {
   // Use `app.import` to add additional libraries to the generated
   // output files.
 
-  app.import('vendor/bootstrap/dist/css/bootstrap.css');
-  var awesomeFonts = new Funnel('vendor/font-awesome', {
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  var awesomeFonts = new Funnel('bower_components/font-awesome', {
     srcDir: '/fonts',
     destDir: '/fonts'
   })
 
 
-  app.import('vendor/perfect-scrollbar/css/perfect-scrollbar.css');
-  app.import('vendor/roboto.css');
-  app.import('vendor/font-awesome/css/font-awesome.css');
+  app.import('bower_components/perfect-scrollbar/css/perfect-scrollbar.css');
 
-  app.import('vendor/feather-icons-sass/feather.css');
-  var featherFonts = new Funnel('vendor/feather-icons-sass', {
+  // app.import('vendor/panel.css');
+  // var awesomeFonts = new Funnel('bower_components/font-awesome', {
+  //   srcDir: '/fonts',
+  //   destDir: '/fonts'
+  // })
+
+  app.import('bower_components/roboto.css');
+  var robotoFonts = new Funnel('bower_components/roboto-webfont-bower', {
+    srcDir: '/fonts',
+    destDir: '/fonts'
+  })
+
+
+  app.import('bower_components/font-awesome/css/font-awesome.css');
+
+  app.import('bower_components/feather-icons-sass/feather.css');
+  var featherFonts = new Funnel('bower_components/feather-icons-sass', {
     srcDir: '/fonts',
     destDir: '/fonts'
   });
 
-  app.import('vendor/animate.css/animate.css');
+  app.import('bower_components/animate.css/animate.css');
 
 
-  app.import('vendor/modernizr/modernizr.js');
-  app.import('vendor/jquery/dist/jquery.js');
+  app.import('bower_components/modernizr/modernizr.js');
+  app.import('bower_components/jquery/dist/jquery.js');
 
-  app.import('vendor/bootstrap/dist/js/bootstrap.js');
-  app.import('vendor/jquery.easing/js/jquery.easing.js');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/jquery.easing/js/jquery.easing.js');
   //
-  app.import('vendor/fastclick/lib/fastclick.js');
+  app.import('bower_components/fastclick/lib/fastclick.js');
   //
-  app.import('vendor/onScreen/jquery_onScreen.js');
+  app.import('bower_components/onScreen/jquery_onScreen.js');
   //
-  app.import('vendor/jquery-countTo/jquery.countTo.js');
+  app.import('bower_components/jquery-countTo/jquery.countTo.js');
   //
-  app.import('vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js');
+  app.import('bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js');
 
-  app.import('vendor/my.js')
+
+  app.import('vendor/scripts/ui/ui.js');
+  app.import('vendor/scripts/ui/accordion.js');
+  app.import('vendor/scripts/ui/animate.js');
+  app.import('vendor/scripts/ui/link-transition.js');
+  app.import('vendor/scripts/ui/panel-controls.js');
+  app.import('vendor/scripts/ui/preloader.js');
+
+  // 这个js有问题
+  app.import('vendor/scripts/ui/toggle.js');
+
+  app.import('vendor/scripts/urban-constants.js');
+  app.import('vendor/scripts/extentions/lib.js');
 
   // If you need to use different assets in different
   // environments, specify an object as the first parameter. That
@@ -56,6 +81,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree([featherFonts, awesomeFonts]);
-  // return app.toTree();
+  return app.toTree([featherFonts, awesomeFonts, robotoFonts]);
 };
