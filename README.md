@@ -1,52 +1,66 @@
 # dashboard
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+**bower install**
 
-## Prerequisites
+**npm install**
 
-You will need the following things properly installed on your computer.
+**package.json**
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+去掉ember.js的欢迎插件 `ebmer-welcome-page`
 
-## Installation
 
-* `git clone <repository-url>` this repository
-* `cd dashboard`
-* `npm install`
-* `bower install`
+## bower
 
-## Running / Development
+修改默认的安装路径到vendor下面, 修改`.bowerrc`文件
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+### bootstrap
 
-### Code Generators
+安装指定版本的bootstrap
 
-Make use of the many generators for code, try `ember help generate` for more details
+  bower install bootstrap#3.3.4 --save
 
-### Running Tests
+### perfect-scrollbar
 
-* `ember test`
-* `ember test --server`
+bower install perfect-scrollbar#0.6.2 --save
 
-### Building
+### font
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+**roboto-webfont**
 
-### Deploying
+  bower install roboto-webfont --save
 
-Specify what it takes to deploy your app.
+**font-awesome**
 
-## Further Reading / Useful Links
+  bower install font-awesome#4.3.0 --save
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+**feather-icons**
+  bower install feather-icons-sass --save
+
+## 动画
+
+  bower install animate.css#3.4.0 --save
+
+## js
+
+  bower install modernizr#2.8.3 --save
+
+  bower install jquery.easing#1.3 --save
+
+  bower install fastclick --save
+
+  bower install jquery-onscreen --save
+
+  bower install jquery-countTo --save
+
+bower install perfect-scrollbar#0.6.2 --save
+
+
+## ember-cli-build.js
+
+导入系统需要的Css样式及js脚本
+
+  app.import('vendor/bootstrap/dist/css/bootstrap.css')
+
+  npm install broccoli-funnel --save-dev
+
+> https://60devs.com/ember-cli-how-to-add-3rd-party-library-and-related-resources-to-app.html

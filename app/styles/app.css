@@ -1,0 +1,7 @@
+@import "panel.css";
+@import "urban.css";
+@import "urban.skins.css";
+
+body,body>.ember-view,html {
+    height: 100%
+}
